@@ -7,6 +7,10 @@ export default {
    component: PiaButton
 } as Meta<typeof PiaButton>
 
-const Template: Story<typeof PiaButton> = ()=> <PiaButton/> 
+const ButtonComponent: Story<typeof PiaButton> = () => {
+   return(
+      <PiaButton/> 
+   )
+}
 
-export const Primary = Template.bind({})
+export const Primary = ButtonComponent.bind({})
