@@ -1,23 +1,44 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-const Button = styled.button`
-  background: #eb9b00;
+export interface PiaButtonProps {
+  onClick?: () => void;
+  text?: string;
+  variant?: 'primary' | 'secondary';
+}
+
+const Button = styled.button<PiaButtonProps>`
+  background: ${(props: PiaButtonProps) => props.variant === 'primary' ? '#eb9b00' : '#fff'};
   padding: 16px 32px;
   border: #eb9b00 2px solid;
-  color: #fff;
+  color: ${(props: PiaButtonProps) => props.variant === 'primary' ? '#fff' : '#eb9b00'};
   font-size: 20px;
   cursor: pointer;
-  &:hover {
-    background: #b87900;
-    border: #b87900 2px solid;
-  }
+  ${(props: PiaButtonProps) => props.variant === 'primary'
+    ? css`
+      &:hover {
+        background: #b87900;
+        border: #b87900 2px solid;
+      }
+    `
+    : css`
+      &:hover {
+        background: #fff;
+        border: #b87900 2px solid;
+        color: #b87900;
+      }
+    `
+  };
 `
 
-const PiaButton = () => {
+const PiaButton = ({
+  onClick,
+  text = 'click here!',
+  variant = 'primary'
+}: PiaButtonProps) => {
   return(
-    <Button>
-      Clique aqui
+    <Button onClick={onClick} variant={variant}>
+      { text }
     </Button>
   )
 }
