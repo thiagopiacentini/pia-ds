@@ -20,4 +20,5 @@ export const Thing: FC<Props> = ({ children }) => {
 
 export * from './components/PiaButton';
 export * from './components/PiaCard';
+export * from './components/PiaCardOptions';
 export * from './components/PiaTag';
