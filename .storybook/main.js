@@ -5,9 +5,25 @@ module.exports = {
   ],
   addons: [
     '@storybook/addon-links',
+    '@storybook/addon-a11y',
     '@storybook/addon-essentials',
-    '@storybook/addon-styling',
-    '@storybook/addon-a11y'
+    {
+      name: '@storybook/addon-styling',
+      options: {
+        sass: {
+          // Require your Sass preprocessor here
+          implementation: require('sass'),
+        },
+      },
+    },
+    {
+      name: 'storybook-addon-sass-postcss',
+      options: {
+        sassLoaderOptions: {
+          implementation: require('sass'),
+        },
+      },
+    },
   ],
   // https://storybook.js.org/docs/react/configure/typescript#mainjs-configuration
   typescript: {
