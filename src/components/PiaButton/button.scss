@@ -1,0 +1,88 @@
+@import '../../styles/variables';
+
+.button {
+  color: $white;
+  border-radius: rem(4);
+  cursor: pointer;
+  display: inline-block;
+  font-size: rem(16);
+  font-weight: 600;
+  padding: rem(10) rem(20);
+  text-align: center;
+
+  &--primary {
+    background-color: $primary-color;
+    border: rem(2) solid $primary-color;
+
+    &:hover {
+      background-color: $primary-color-hover;
+    }
+
+    &.button--outline {
+      color: $primary-color-hover;
+      background-color: $white;
+
+      &:hover {
+        background-color: #eee;
+      }
+    }
+  }
+
+  &--secondary {
+    background-color: $secondary-color;
+    border: rem(2) solid $secondary-color;
+
+    &:hover {
+      background-color: $secondary-color-hover;
+    }
+  }
+
+  &--success {
+    background-color: $success-color;
+    border: rem(2) solid $success-color;
+
+    &:hover {
+      background-color: $success-color-hover;
+    }
+  }
+
+  &--warning {
+    background-color: $warning-color;
+    border: rem(2) solid $warning-color;
+    color: #333;
+
+    &:hover {
+      background-color: $warning-color-hover;
+    }
+  }
+
+  &--danger {
+    background-color: $danger-color;
+    border: rem(2) solid $danger-color;
+
+    &:hover {
+      background-color: $danger-color-hover;
+    }
+  }
+
+  &--small {
+    font-size: rem(14);
+    padding: rem(6) rem(12);
+  }
+
+  &--large {
+    font-size: rem(18);
+    padding: rem(14) rem(28);
+  }
+
+  &--disabled {
+    background-color: $disabled-color;
+    border-color: $disabled-color;
+    color: #535353;
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: $disabled-color;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, Story } from '@storybook/react'
-import PiaButton, { PiaButtonProps } from "../src/components/PiaButton";
+import PiaButton, { ButtonProps } from "../src/components/PiaButton/button";
 
 export default {
    title: 'Components/Button',
@@ -15,13 +15,30 @@ const ButtonComponent: Story<typeof PiaButton> = (args) => {
 
 export const Primary = ButtonComponent.bind({})
 Primary.args = {
-   text: 'primary',
+   children: 'primary',
    variant: 'primary'
-} as PiaButtonProps;
-
+} as ButtonProps;
 
 export const Secondary = ButtonComponent.bind({})
 Secondary.args = {
-   text: 'secondary',
+   children: 'secondary',
    variant: 'secondary'
-} as PiaButtonProps;
+} as ButtonProps;
+
+export const Success = ButtonComponent.bind({})
+Success.args = {
+   children: 'success',
+   variant: 'success'
+} as ButtonProps;
+
+export const Warning = ButtonComponent.bind({})
+Warning.args = {
+   children: 'warning',
+   variant: 'warning'
+} as ButtonProps;
+
+export const Danger = ButtonComponent.bind({})
+Danger.args = {
+   children: 'danger',
+   variant: 'danger'
+} as ButtonProps;
