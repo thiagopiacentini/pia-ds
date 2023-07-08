@@ -8,24 +8,24 @@ export interface PiaButtonProps {
 }
 
 const Button = styled.button<PiaButtonProps>`
-  background: ${(props: PiaButtonProps) => props.variant === 'primary' ? '#eb9b00' : '#fff'};
+  background: ${(props: PiaButtonProps) => props.variant === 'primary' ? '#006fe6' : '#fff'};
   padding: 16px 32px;
-  border: #eb9b00 2px solid;
-  color: ${(props: PiaButtonProps) => props.variant === 'primary' ? '#fff' : '#eb9b00'};
+  border: #006fe6 2px solid;
+  color: ${(props: PiaButtonProps) => props.variant === 'primary' ? '#fff' : '#006fe6'};
   font-size: 20px;
   cursor: pointer;
   ${(props: PiaButtonProps) => props.variant === 'primary'
     ? css`
       &:hover {
-        background: #b87900;
-        border: #b87900 2px solid;
+        background: #0056b3;
+        border: #0056b3 2px solid;
       }
     `
     : css`
       &:hover {
         background: #fff;
-        border: #b87900 2px solid;
-        color: #b87900;
+        border: #0056b3 2px solid;
+        color: #0056b3;
       }
     `
   };
